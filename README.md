@@ -11,7 +11,7 @@ This code snippet demonstrates the process of predicting a handwritten digit fro
 input_image_path = input('Path of the image to be predicted: ')
 ```
  **i)** Purpose: Prompt the user to input the file path of the image to be predicted.<br>
- **II** Explanation: The user provides the path to the image (e.g., image.png). This path is essential for loading 
+ **ii)** Explanation: The user provides the path to the image (e.g., image.png). This path is essential forloading 
         the image that the model will use for prediction.
 2. Read the Image
 ``` Python
