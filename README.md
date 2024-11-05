@@ -7,8 +7,9 @@ This code snippet demonstrates the process of predicting a handwritten digit fro
 
 1. Input Image Path
 
-` input_image_path = input('Path of the image to be predicted: ')
-
+``` Python
+input_image_path = input('Path of the image to be predicted: ')
+```
 Purpose: Prompt the user to input the file path of the image to be predicted.
 Explanation: The user provides the path to the image (e.g., image.png). This path is essential for loading the image that the model will use for prediction.
 2. Read the Image
