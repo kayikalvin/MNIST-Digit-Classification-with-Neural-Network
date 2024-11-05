@@ -17,49 +17,49 @@ input_image_path = input('Path of the image to be predicted: ')
 ``` Python
 input_image = cv2.imread(input_image_path)
 ```
-Purpose: Read the image file from the provided path.
+Purpose: Read the image file from the provided path.<br>
 Explanation: The cv2.imread() function from OpenCV reads the image file and loads it into memory as a NumPy array. The image is typically in RGB (or BGR) format, depending on how OpenCV handles it.
 3. Display the Image
 ``` Python
 cv2_imshow(input_image)
 ```
-Purpose: Display the input image for visual inspection.
+Purpose: Display the input image for visual inspection.<br>
 Explanation: The cv2_imshow() function (often used in Jupyter notebooks or Google Colab) is used to show the image to the user. This allows for confirmation of the image before prediction. In a standard Python script, cv2.imshow() would be used.
 4. Convert Image to Grayscale
 ``` Python
 grayscale = cv2.cvtColor(input_image, cv2.COLOR_RGB2GRAY)
 ```
-Purpose: Convert the image to grayscale to simplify the input.
+Purpose: Convert the image to grayscale to simplify the input.<br>
 Explanation: Handwritten digit classification models usually perform better on grayscale images since color is not essential for digit recognition. The cv2.cvtColor() function converts the image from RGB (or BGR) to grayscale.
 5. Resize the Image
 ``` Python
 input_image_resize = cv2.resize(grayscale, (28, 28))
 ```
-Purpose: Resize the image to 28x28 pixels to match the model’s input size.
+Purpose: Resize the image to 28x28 pixels to match the model’s input size.<br>
 Explanation: Many digit recognition models (e.g., MNIST) expect the input images to be of size 28x28 pixels. This step ensures that the image is resized to the correct dimensions.
 6. Normalize the Image
 ``` Python
 input_image_resize = input_image_resize / 255
 ```
-Purpose: Normalize the pixel values to the range [0, 1].
+Purpose: Normalize the pixel values to the range [0, 1].<br>
 Explanation: Deep learning models perform better when input data is scaled. The pixel values range from 0 to 255, so dividing by 255 converts the values to the range [0, 1], which helps the model process the image more efficiently.
 7. Reshape the Image
 ``` Python
 image_reshaped = np.reshape(input_image_resize, [1, 28, 28])
 ```
-Purpose: Reshape the image to match the input shape the model expects.
+Purpose: Reshape the image to match the input shape the model expects.<br>
 Explanation: Deep learning models typically expect input in batches. Even though there is only one image, it needs to be reshaped into a batch of size 1. The model likely expects a shape of [batch_size, height, width], so the image is reshaped to [1, 28, 28].
 8. Make the Prediction
 ``` Python
 input_prediction = model.predict(image_reshaped)
 ```
-Purpose: Make a prediction on the reshaped image using the trained model.
+Purpose: Make a prediction on the reshaped image using the trained model.<br>
 Explanation: The reshaped image is passed through the model to obtain the prediction. The model typically outputs a vector of probabilities, one for each possible class (in this case, digits 0-9).
 9. Get the Predicted Label
 ``` Python
 input_pred_label = np.argmax(input_prediction)
 ```
-Purpose: Extract the class with the highest probability from the model's output.
+Purpose: Extract the class with the highest probability from the model's output.<br>
 Explanation: The model’s output is a vector of probabilities, one for each possible digit (0-9). The np.argmax() function finds the index of the maximum value in the prediction vector, which corresponds to the predicted label (digit).
 10. Print the Prediction
 ``` Python
