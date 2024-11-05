@@ -65,6 +65,6 @@ input_pred_label = np.argmax(input_prediction)
 ``` Python
 print('The Handwritten Digit is recognised as ', input_pred_label)
 ```
- **I** Purpose: Output the predicted digit label.
+ **I** Purpose: Output the predicted digit label.<br>
  **II** Explanation: This line prints the predicted digit (from 0 to 9), providing the user with the result of the model’s prediction.
 
