@@ -2,7 +2,7 @@
 
 
 
-## Deep Learning Image Prediction Workflow
+## Deep Learning Image Predictor Workflow
 This code snippet demonstrates the process of predicting a handwritten digit from an image using a deep learning model. The following steps outline the operations performed, along with the reasons for each step and how they contribute to the overall prediction process.
 
 1. Input Image Path
