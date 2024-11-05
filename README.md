@@ -6,9 +6,9 @@
 This code snippet demonstrates the process of predicting a handwritten digit from an image using a deep learning model. The following steps outline the operations performed, along with the reasons for each step and how they contribute to the overall prediction process.
 
 1. Input Image Path
-```
-input_image_path = input('Path of the image to be predicted: ')
-```
+
+` input_image_path = input('Path of the image to be predicted: ')
+
 Purpose: Prompt the user to input the file path of the image to be predicted.
 Explanation: The user provides the path to the image (e.g., image.png). This path is essential for loading the image that the model will use for prediction.
 2. Read the Image
